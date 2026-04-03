@@ -549,7 +549,7 @@ function computeDynamicTagCounts() {
   if (_dynTagCache.key === key) return _dynTagCache.data;
 
   var { where, params } = buildWhere('tag');
-  var sql = 'SELECT tags_text FROM video_search' + where + " AND tags_text IS NOT NULL AND tags_text != ''";
+  var sql = 'SELECT tags_text FROM video_search' + where + (where ? " AND" : " WHERE") + " tags_text IS NOT NULL AND tags_text != ''";
   var stmt = db.prepare(sql);
   stmt.bind(params);
   var counts = {};
@@ -572,7 +572,7 @@ function computeDynamicSeriesCounts() {
   if (_dynSeriesCache.key === key) return _dynSeriesCache.data;
 
   var { where, params } = buildWhere('group');
-  var sql = "SELECT series_text, COUNT(*) FROM video_search" + where + " AND series_text IS NOT NULL AND series_text != '' GROUP BY series_text";
+  var sql = "SELECT series_text, COUNT(*) FROM video_search" + where + (where ? " AND" : " WHERE") + " series_text IS NOT NULL AND series_text != '' GROUP BY series_text";
   var stmt = db.prepare(sql);
   stmt.bind(params);
   var counts = {};
@@ -997,7 +997,7 @@ function getSearchAcSuggestions(query) {
 
   // Cast
   try {
-    var castStmt = db.prepare("SELECT name, cnt FROM cast_count WHERE LOWER(name) LIKE :q || '%' ORDER BY cnt DESC LIMIT 5");
+    var castStmt = db.prepare("SELECT name, cnt FROM cast_count WHERE LOWER(name) LIKE '%' || :q || '%' ORDER BY cnt DESC LIMIT 5");
     castStmt.bind({ ':q': q });
     var casts = [];
     while (castStmt.step()) { var cr = castStmt.get(); casts.push({ text: cr[0], count: cr[1] }); }
