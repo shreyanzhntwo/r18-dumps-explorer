@@ -170,7 +170,7 @@ When a new dump is released on [r18.dev/dumps](https://r18.dev/dumps):
 2. Run `node convert_pg_to_sqlite.js`
 3. Reload the viewer and drop the new `r18_data.db`
 
-Your bookmarks persist across database updates — they're stored in localStorage, not in the database file.
+Your bookmarks persist across database updates — they're stored in localStorage, not in the database file. You can also export your bookmarks as a JSON file for extra safety using the **Export** button.
 
 ---
 
