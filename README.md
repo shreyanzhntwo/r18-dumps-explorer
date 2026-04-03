@@ -13,7 +13,7 @@ r18dotdev_dump_YYYY-MM-DD.sql.gz     (PostgreSQL dump from r18.dev)
         │
         ▼  node convert_pg_to_sqlite.js
         │
-r18_data.db                           (optimised SQLite, ~1.6 GB)
+r18_data.db                           (optimised SQLite, ~2 GB)
         │
         ▼  open r18_viewer.html, drop the .db file
         │
