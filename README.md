@@ -125,7 +125,7 @@ Click any card to open a slide-in detail panel showing:
 - Category pills
 - Gallery images
 
-![Detail Panel](https://github.com/user-attachments/assets/67069891-ee53-4c60-822e-0c2f383f448f)
+![Detail Panel](https://github.com/user-attachments/assets/f49edae2-145a-4672-bb2d-cc1cddcaa15e)
 
 ### Clickable metadata for cross-filtering
 
