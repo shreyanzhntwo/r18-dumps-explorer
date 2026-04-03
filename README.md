@@ -103,7 +103,7 @@ Type in the search bar to find entries by code, title, cast, tags, or any metada
 
 Autocomplete suggests matching codes, titles, and cast names as you type.
 
-![Search Autocomplete](https://github.com/user-attachments/assets/9e3e5b68-8b3a-4562-9c08-790310087aba)
+![Search Autocomplete](https://github.com/user-attachments/assets/e8a4a2a2-5b85-433b-89c0-ea55c9a1e01c)
 
 ### Filtering, sorting, and layout options
 
